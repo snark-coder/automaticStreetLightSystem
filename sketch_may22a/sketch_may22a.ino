@@ -51,11 +51,11 @@ void loop() {
   Serial.println(sunset);
 
   if (currentTimeHours >= sunrise && currentTimeHours < sunset) {
-    digitalWrite(ledPin,  HIGH);  // Turn off the LED during daylight hours
+    digitalWrite(ledPin,  LOW); 
   } else {
-    digitalWrite(ledPin, LOW);   // Turn on the LED during the night
+    digitalWrite(ledPin, HIGH); 
   }
 
 
-  delay(60000);  // Wait for a minute before checking again
+  delay(60000);  
 }
